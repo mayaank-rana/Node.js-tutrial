@@ -1,11 +1,6 @@
-const amount =5
+const _ =require('lodash');
 
-if(amount<10){
-    console.log('small num');
-}
-else{
-    console.log('large num');
-}
+const items=[1,[2,[3,[4]]]]
 
-console.log('this is first node.js')
- 
+const newItems =_.flatMapDeep(items);
+console.log(items)
