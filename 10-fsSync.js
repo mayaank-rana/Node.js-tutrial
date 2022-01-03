@@ -3,7 +3,7 @@
 const first=readFileSync('./content/file1.txt','utf8')
 const second=readFileSync('./content/file2.txt','utf8')
 
-console.log(first,second)
+//console.log(first,second)
 
 
 //to write in a file...if file doesn't exist..then it's creaded ittself
@@ -21,3 +21,4 @@ writeFileSync(
     {flag:'a'}
 )
 
+//it's slow cause things happen line by line

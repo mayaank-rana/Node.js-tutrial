@@ -4,3 +4,5 @@ const items=[1,[2,[3,[4]]]]
 
 const newItems =_.flatMapDeep(items);
 console.log(items)
+
+console.log("hello  aaaa world!! we are here")

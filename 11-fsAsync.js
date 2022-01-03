@@ -29,3 +29,5 @@ readFile('./content/file1.txt','utf8',(err,result)=>{
     
     })
     })
+
+    //fast as it does not follow line by like approach
