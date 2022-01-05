@@ -1,26 +1,22 @@
-const {readFile}=require('fs');
-const { reject } = require('lodash');
-const path = require('path');
-const { resolve } = require('path');
+const http=require('http');
 
-const getPath=(path)=>{
-    return new Promise((resolve,reject)=>{
-        readFile(path,'utf8',(err,data)=>{
-            if(err){
-                reject(err);
-            }
-            else{
-                resolve(data);
-            }
-        })
+// console.log('anc')
 
-    })
-}
+const server=http.createServer((request,resolve)=>{
+    if(request.url==='/')
+    {
+        resolve.sendFile(__dirname+'/demo.html')
+    }
+    if(request.url==='/about')
+    {
+        resolve.end('Welcome to short history')
+    }
+   
+    // console.log(request)
+    // resolve.write('Welcome To our Home Page')
+    // resolve.end()
 
-getPath('./content/file1.txt')
-.then((result)=>{
-    console.log(result);
-)}
-.catch((err)=>{
-    console.log(err);
 })
+
+server.listen(5000)
+// //comment
